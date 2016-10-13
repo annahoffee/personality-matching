@@ -1,0 +1,9 @@
+
+
+
+graph personX {
+
+      node[shape=circle, height=.75, width=.5, fontname=Courier, fontsize=14];
+      x[label="Person X ", fillcolor=black, fontcolor=white, style=filled];
+
+}

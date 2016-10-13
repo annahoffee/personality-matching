@@ -1,0 +1,33 @@
+
+
+
+
+graph test{
+  rankdir=LR;
+  node[shape=circle, height=.01, width=.01, fontname=Courier];
+  a[label="Person X", fillcolor=black, fontcolor=white,  style=filled];
+  b[label="neighbor 1",  style=filled, fillcolor=Purple, fontsize=14];
+  c[label="neighbor 2", style=filled, fillcolor=Purple, fontsize=14];
+  d[label="neighbor 3", style=filled, color=Purple, fontsize=14];
+  e[label="neighbor 4", style=filled, color=Purple, fontsize=14];
+  f[label="neighbor 5", style=filled, color=Purple, fontsize=14];
+  g[label="neighbor 6", style=filled, color=Purple, fontsize=14];
+  h[label="neighbor 7", style=filled, color=Purple, fontsize=14];
+  i[label="neighbor 8", style=filled, color=Purple, fontsize=14];
+  j[label="neighbor 9", style=filled, color=Purple, fontsize=14];
+
+  rankdir=BT;
+  g;
+  rankdir=LR;
+  e;
+  a -- b;
+  rankdir=BT;
+  c -- a;
+  a -- d;
+ rankdir=RL;
+  f;
+  h;
+  rankdir=TB;
+  i;
+  j;
+}
