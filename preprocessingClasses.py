@@ -102,6 +102,6 @@ class ImportData(object):
 
             for x in row_numbers_partners:
                 partner_information[self.input_file.loc[row_numbers_partners, "pid"][x]] = self.input_file.loc[row_numbers_partners, "dec"][x]
-            
+
 
             self.speed_daters_list.append(Person(trait_information, partner_information, float(iid)))

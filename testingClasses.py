@@ -12,6 +12,7 @@ from sklearn.preprocessing import Imputer
 from preprocessingClasses import Person
 
 
+
 class CompareSimilarPersonTest(object):
     def __init__(self, input_person_fans, input_person_not_fans, predicted_qualities_dict, iid, trait_names):
         self.input_person_fans = input_person_fans
@@ -58,7 +59,7 @@ class CompareSimilarPersonTest(object):
             ## compute which real person is closest to the fake person
         max_score = [1, self.comparison_scores[0][1]]
         for x in range(len(self.comparison_scores)):
-            
+
             if self.comparison_scores[x][1] <= max_score[1]:
                 max_score[0] = self.comparison_scores[x][0]
                 max_score[1] = self.comparison_scores[x][1]

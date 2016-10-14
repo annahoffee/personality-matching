@@ -13,6 +13,7 @@ from KNNClasses import FindMatchQualities
 
 
 
+
 def findKNearestNeighbors(speed_daters_list, input_person):
 
     ## initialize the NearestNeighbors object from sklearn
@@ -58,13 +59,13 @@ def findKNearestNeighbors(speed_daters_list, input_person):
 
 
 class RunTest(object):
-    def __init__(self, pickle_file_name, input_trait_vector):
+    def __init__(self, pickle_file_name, input_trait_vector, testing):
 
         self.speed_daters_list = pickle.load(open(pickle_file_name, "rb"))
         input_trait_vector = pd.Series(input_trait_vector, index=["age", "race", "gender", "field_cd", "career_c", "income", "go_out", "sports", "tvsports", "exercise", "dining", "art", "hiking", "gaming", "clubbing", "reading", "movies", "concerts", "music", "yoga"])
         self.input_person = Person(input_trait_vector, {}, -1000)
         nearest_neighbors_dict = findKNearestNeighbors(self.speed_daters_list,  self.input_person)
-        match_qualities = FindMatchQualities(nearest_neighbors_dict, self.speed_daters_list)
+        match_qualities = FindMatchQualities(nearest_neighbors_dict, self.speed_daters_list, testing)
         match_qualities.identifyInterestedPeople()
 
         trait_names_helper = self.speed_daters_list[0]

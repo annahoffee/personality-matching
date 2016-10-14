@@ -14,7 +14,6 @@ from testingClasses import SVMClassification, CompareSimilarPersonTest
 from KNNClasses import FindMatchQualities
 from sklearn.svm import SVC
 from runModel import RunTest
-#from neuralNetClasses import AdmirerSet
 import copy
 
 
